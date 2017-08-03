@@ -1,0 +1,7 @@
+<integrations>
+    <integration name="Tkdigital_Buzzsubs">
+        <email>tomas@tkdigital.co.uk</email>
+        <endpoint_url>https://mage.buzzsubs.com/oauth</endpoint_url>
+        <identity_link_url>https://mage.buzzsubs.com</identity_link_url>
+    </integration>
+</integrations>

@@ -1,0 +1,17 @@
+<integrations>
+    <integration name="Tkdigital_Buzzsubs">
+        <resources>
+            <!-- To grant permission to Magento_Sales::reorder, all its parent resources need to be declared-->
+            <resource name="Magento_Sales::sales" />
+            <resource name="Magento_Sales::sales_operation" />
+            <resource name="Magento_Sales::sales_order" />
+            <resource name="Magento_Sales::actions" />
+            <resource name="Magento_Sales::actions_view" />
+            <resource name="Magento_SalesRule::quote" />
+
+            <resource name="Magento_Backend::stores" />
+            <resource name="Magento_Backend::stores_settings" />
+            <resource name="Magento_Backend::store" />
+        </resources>
+    </integration>
+</integrations>
