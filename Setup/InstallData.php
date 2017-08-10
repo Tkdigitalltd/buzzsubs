@@ -30,8 +30,11 @@ class InstallData implements InstallDataInterface
      * @param StoreManagerInterface $storeManager
      */
 
-    public function __construct(ConfigBasedIntegrationManager $integrationManager, File $io, StoreManagerInterface $storeManager)
-    {
+    public function __construct(
+        ConfigBasedIntegrationManager $integrationManager,
+        File $io,
+        StoreManagerInterface $storeManager
+    ) {
         $this->integrationManager = $integrationManager;
         $this->io = $io;
         $this->storeManager = $storeManager;
@@ -41,7 +44,7 @@ class InstallData implements InstallDataInterface
      * {@inheritdoc}
      */
 
-    public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
+    public function install()
     {
         $this->integrationManager->processIntegrationConfig(['Tkdigital_Buzzsubs']);
 
@@ -76,7 +79,8 @@ class InstallData implements InstallDataInterface
      */
     public function getContent($scriptName)
     {
-        $content = '<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+        $content = '<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
 <head>
     <script src="https://mage.buzzsubs.com/buzz/vendor/app.js" src_type="url" defer="defer"/>
     <script src="https://mage.buzzsubs.com/buzz/scripts/buzz-' . $scriptName . '-subs.js" src_type="url" defer="defer"/>
