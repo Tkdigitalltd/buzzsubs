@@ -44,7 +44,7 @@ class InstallData implements InstallDataInterface
      * {@inheritdoc}
      */
 
-    public function install()
+    public function install(ModuleDataSetupInterface $setup, ModuleContextInterface $context)
     {
         $this->integrationManager->processIntegrationConfig(['Tkdigital_Buzzsubs']);
 

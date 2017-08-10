@@ -4,7 +4,7 @@
   "require": {
   },
   "type": "magento2-module",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "license": "OSL-3.0",
   "autoload": {
     "files": [
